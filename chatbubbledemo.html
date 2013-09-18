@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>
+	Chatbubble Demo
+</title>
+<script type="text/javascript" src="../jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="chatbubbles.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.chatBar .chatInput').keydown(function(evt) {
+		var dateNow = new Date(),
+		timestampStr = dateNow.getHours() + ':' + dateNow.getMinutes();
+		if (evt.which === 13) {
+			var textVal = $(this).val(),
+			chatBubbleHtml = new chatBubble({
+				'userName': 'test:',
+				'chatText': textVal,
+				'timestamp': timestampStr
+			});
+			$('.chatSpace').append(chatBubbleHtml);
+			$(this).val('');
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<div class="chatSpace">
+	</div>
+	<div class="chatBar">
+		<input class="chatInput" type="text"></input>
+	</div>
+</body>
+</html>
