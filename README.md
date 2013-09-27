@@ -1,7 +1,9 @@
 chatbubbles
 ===========
 
-jQuery plugin for creating automatic-scrolling, timestamped, labeled chat message bubbles
+<p>jQuery plugin for creating automatic-scrolling, timestamped, labeled chat message bubbles.</p>
+
+<p>Demo: http://dominiquemb.github.io/chatbubbles/</p>
 
 <h2><b>Usage:</b></h2>
 
