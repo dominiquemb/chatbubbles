@@ -25,8 +25,11 @@ Usage:
                                 'timestamp': timestampStr
                         });
 
-                        $('.chatSpace').append(chatBubbleHtml).trigger('newBubble');
+                        $('.chatBubbleContainer').append(chatBubbleHtml).trigger('newBubble');
                         
                         $(this).val('');
                 }
     });
+    
+    <div class="chatBubbleContainer"></div>
+    <input placeholder="Type something here"></input>
